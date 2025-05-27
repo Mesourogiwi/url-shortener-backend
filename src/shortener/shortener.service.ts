@@ -1,6 +1,5 @@
 import {Inject, Injectable, NotFoundException} from '@nestjs/common'
 import {CreateShortenerDto} from './dto/create-shortener.dto'
-import {UpdateShortenerDto} from './dto/update-shortener.dto'
 import {MySql2Database} from 'drizzle-orm/mysql2'
 import * as schema from '../db/schema'
 import {addMinutes} from 'date-fns'
@@ -34,13 +33,5 @@ export class ShortenerService {
         }
 
         return result
-    }
-
-    update(id: number, updateShortenerDto: UpdateShortenerDto) {
-        return `This action updates a #${id} shortener`
-    }
-
-    remove(id: number) {
-        return `This action removes a #${id} shortener`
     }
 }
