@@ -21,7 +21,10 @@ export class ShortenerService {
             expirationTime: addMinutes(new Date(), Number(process.env.EXPIRATION_TIME_MINUTES))
         })
         await this.cacheManager.del('all_shortened_urls')
-        return 'Novo link gerado com sucesso!'
+        return {
+            url: createShortenerDto.url,
+            shortUrl: generatedName
+        }
     }
 
     @CacheKey('all_shortened_urls')
