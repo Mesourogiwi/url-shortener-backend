@@ -22,6 +22,27 @@
       "when": 1748438078545,
       "tag": "0002_fair_rhodey",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1748442018711,
+      "tag": "0008_warm_doorman",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1748442097964,
+      "tag": "0004_elite_spectrum",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1748442218773,
+      "tag": "0005_wandering_whizzer",
+      "breakpoints": true
     }
   ]
 }

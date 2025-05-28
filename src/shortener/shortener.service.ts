@@ -44,6 +44,13 @@ export class ShortenerService {
             throw new NotFoundException('Link inválido')
         }
 
+        await this.db
+            .update(schema.urlsTable)
+            .set({
+                numberOfAccesses: result.numberOfAccesses + 1
+            })
+            .where(eq(schema.urlsTable.shortUrl, shortUrl))
+
         console.log(differenceInMinutes(result.expirationTime, new Date()))
 
         if (differenceInMinutes(new Date(), result.expirationTime) > 0) {
